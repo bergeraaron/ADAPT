@@ -9,25 +9,23 @@
  * Contributors:
  *    
  *******************************************************************************/
-using System.Collections.Generic;
+
 using AgGateway.ADAPT.ApplicationDataModel.Common;
 using AgGateway.ADAPT.ApplicationDataModel.Representations;
 
 namespace AgGateway.ADAPT.ApplicationDataModel.Equipment
 {
-    class SystemModelType
+    class IrrSectionSetupType
     {
-        public SystemModelType()
+        public IrrSectionSetupType()
         {
-            Id = CompoundIdentifierFactory.Instance.Create();
-            ContextItems = new List<ContextItem>();
+            SectionId = CompoundIdentifierFactory.Instance.Create();
         }
-        public CompoundIdentifier Id { get; private set; }
-        public int ManufacturerId { get; set; }
-        public string Description { get; set; }
-        public SystemTypeEnum SysType { get; set; }
-        public int BrandId { get; set; }
-        public string Series { get; set; }
-        public List<ContextItem> ContextItems { get; set; }
+        public CompoundIdentifier SectionId { get; private set; }
+        public SectionTypeEnum SectionType { get; set; }
+        public double InnerDistance { get; set; }
+        public double OuterDistance { get; set; }
+        public EnumeratedValue SpatialFootprint { get; set; }//MultiPolgonSpatialScopeType
+        public double NominalEfficiency { get; set; }
     }
 }
