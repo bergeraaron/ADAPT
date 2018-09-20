@@ -1,6 +1,6 @@
 /*******************************************************************************
  * Copyright (C) 2016 AgGateway and ADAPT Contributors
- * Copyright (C) 2016 Deere and Company
+ * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -16,6 +16,7 @@ using AgGateway.ADAPT.ApplicationDataModel.Logistics;
 using AgGateway.ADAPT.ApplicationDataModel.ReferenceLayers;
 using AgGateway.ADAPT.ApplicationDataModel.Representations;
 using AgGateway.ADAPT.ApplicationDataModel.Shapes;
+using AgGateway.ADAPT.ApplicationDataModel.Notes;
 
 namespace AgGateway.ADAPT.ApplicationDataModel.Equipment
 {
@@ -39,7 +40,7 @@ namespace AgGateway.ADAPT.ApplicationDataModel.Equipment
         public CornerArmTypeEnum CornerArmType { get; set; }
         public FlowDataSourceEnum FlowDataPedigree { get; set; }
         public GpsSourceEnum LocationDataPedigree { get; set; }
-        //TimeDataSourceEnum //TimeDataPedigree
+        public TimeDataSourceEnum TimeDataPedigree { get; set; }
         public TimeScope TimeScope { get; set; }
         public double SystemLength { get; set; }
         public EnumeratedValue LengthUoM { get; set; }
@@ -49,8 +50,15 @@ namespace AgGateway.ADAPT.ApplicationDataModel.Equipment
         public double NominalEfficiency { get; set; }
         public EnumeratedValue PressureUoM { get; set; }
         public PressureLocationEnum PressureLocation { get; set; }
-
-
-
+        public double NominalFlow { get; set; }
+        public EnumeratedValue FlowUoM { get; set; }
+        public EnumeratedValue DepthUoM { get; set; }
+        public EnumeratedValue WaterTotalUoM { get; set; }
+        public EnumeratedValue ProductRateUoM { get; set; }
+        public EnumeratedValue ProductTotalUoM { get; set; }
+        public EnumeratedValue NominalFullCircleTime { get; set; }
+        public Note Note { get; set; }
+        public double BearingOffset { get; set; }
+        public string Description { get; set; }
     }
 }
